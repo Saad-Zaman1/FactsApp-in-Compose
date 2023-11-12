@@ -20,10 +20,3 @@ Facts App is an Android application developed using the latest technologies such
 
 
 Description: Facts are displayed in a visually appealing manner using Jetpack Compose.
-
-## How to Use
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/facts-app.git
