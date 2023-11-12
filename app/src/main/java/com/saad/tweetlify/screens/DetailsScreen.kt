@@ -13,6 +13,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.saad.tweetlify.viewmodels.TweetsViewModel
 
@@ -34,12 +35,13 @@ fun DetailsItem(tweet: String) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(5.dp),
         border = BorderStroke(1.dp, Color(0XFFCCCCCC))
     ) {
         Text(
             text = tweet,
-            style = MaterialTheme.typography.labelMedium,
+            fontSize = 20.sp,
+            style = MaterialTheme.typography.headlineSmall,
             modifier = Modifier.padding(16.dp)
         )
     }

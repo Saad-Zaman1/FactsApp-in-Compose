@@ -1,6 +1,7 @@
 package com.saad.tweetlify.screens
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -23,17 +24,14 @@ import androidx.compose.runtime.produceState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.paint
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.saad.tweetlify.R
 import com.saad.tweetlify.viewmodels.CategoryViewModel
 import kotlinx.coroutines.delay
+import kotlin.random.Random
 
 @Composable
 fun CategoryScreen(onClick: (category: String) -> Unit) {
@@ -83,21 +81,18 @@ fun CategoryItem(category: String, onClick: (category: String) -> Unit) {
             }
             .padding(4.dp)
             .size(160.dp)
-            .clip(RoundedCornerShape(8.dp))
-            .paint(
-                painter = painterResource(id = R.drawable.bg),
-                contentScale = ContentScale.Crop
-            )
+            .clip(RoundedCornerShape(18.dp))
+            .background(Color(0xFF000000 or Random.nextLong(0xFFFFFF + 1)))
             .border(1.dp, Color(0XFFEEEEEE)),
-        contentAlignment = Alignment.BottomCenter,
+        contentAlignment = Alignment.Center,
 
         ) {
         Text(
             text = category,
-            fontSize = 18.sp,
-            color = Color.Black,
-            modifier = Modifier.padding(0.dp, 20.dp),
+            fontSize = 24.sp,
+            color = Color.White,
             style = MaterialTheme.typography.titleLarge
         )
     }
+
 }
