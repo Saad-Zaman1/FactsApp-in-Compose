@@ -54,8 +54,6 @@ android {
 
 
 dependencies {
-    val lifecycle_version = "2.6.2"
-
 
     //Hilt DI
     implementation("com.google.dagger:hilt-android:2.48")

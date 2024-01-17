@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
                                 titleContentColor = Color.White
                             ),
                             title = {
-                                Text(text = "Categories")
+                                Text(text = "Facts")
                             })
                     }
                 ) {
